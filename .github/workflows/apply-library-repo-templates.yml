@@ -57,9 +57,9 @@ jobs:
       - name: Checkout target repository
         uses: actions/checkout@v3
         with:
-          repository: ballerina-platform/${{ github.event.inputs.target_repo }}
+          repository: ${{ github.repository_owner }}/${{ github.event.inputs.target_repo }}
           path: target-repo
-          token: ${{ secrets.BALLERINA_BOT_TOKEN }}
+          token: ${{ secrets.BAL_XLSX_PAT }}
 
       - name: Setup Ballerina
         uses: ballerina-platform/setup-ballerina@v1.1.3
@@ -82,10 +82,10 @@ jobs:
 
       - name: Create Pull Request
         env:
-          GITHUB_TOKEN: ${{ secrets.BALLERINA_BOT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.BAL_XLSX_PAT }}
         run: |
           gh pr create \
-            --repo ballerina-platform/${{ github.event.inputs.target_repo }} \
+            --repo ${{ github.repository_owner }}/${{ github.event.inputs.target_repo }} \
             --base ${{ github.event.inputs.target_branch }} \
             --head apply-templates-${{ github.run_number }} \
             --title "Add ${{ github.event.inputs.template_type }}" \
