@@ -10,7 +10,6 @@
             "dependents": [
                 "module-ballerina-avro",
                 "module-ballerina-crypto",
-                "module-ballerina-data.xmldata",
                 "module-ballerina-data.yaml",
                 "module-ballerina-log",
                 "module-ballerina-os",
@@ -22,7 +21,7 @@
         },
         {
             "name": "module-ballerina-jballerina.java.arrays",
-            "module_version": "1.6.1-SNAPSHOT",
+            "module_version": "1.6.2-SNAPSHOT",
             "level": 1,
             "default_branch": "master",
             "version_key": "stdlibJavaArraysVersion",
@@ -106,6 +105,7 @@
             "version_key": "stdlibAvroVersion",
             "release": true,
             "dependents": [
+                "module-ballerinax-cdc",
                 "module-ballerinax-confluent.cavroserdes",
                 "module-ballerinax-kafka"
             ],
@@ -220,20 +220,6 @@
             "is_multiple_connectors": false
         },
         {
-            "name": "module-ballerina-data.xmldata",
-            "module_version": "1.5.2-SNAPSHOT",
-            "level": 3,
-            "default_branch": "main",
-            "version_key": "stdlibDataXmldataVersion",
-            "release": true,
-            "dependents": [
-                "module-ballerina-ai",
-                "asyncapi-tools",
-                "openapi-tools"
-            ],
-            "is_multiple_connectors": false
-        },
-        {
             "name": "module-ballerina-data.yaml",
             "module_version": "0.8.1-SNAPSHOT",
             "level": 3,
@@ -253,6 +239,7 @@
             "dependents": [
                 "module-ballerina-data.csv",
                 "module-ballerina-data.jsondata",
+                "module-ballerina-data.xmldata",
                 "module-ballerina-edi",
                 "module-ballerina-email",
                 "module-ballerina-toml",
@@ -263,7 +250,7 @@
         },
         {
             "name": "module-ballerina-ldap",
-            "module_version": "1.3.1-SNAPSHOT",
+            "module_version": "1.4.1-SNAPSHOT",
             "level": 3,
             "default_branch": "master",
             "version_key": "stdlibLdapVersion",
@@ -321,7 +308,7 @@
         },
         {
             "name": "module-ballerina-data.csv",
-            "module_version": "0.9.0-SNAPSHOT",
+            "module_version": "0.9.1-SNAPSHOT",
             "level": 4,
             "default_branch": "main",
             "version_key": "stdlibDataCsvVersion",
@@ -341,6 +328,20 @@
             "dependents": [
                 "module-ballerina-ftp",
                 "module-ballerina-http"
+            ],
+            "is_multiple_connectors": false
+        },
+        {
+            "name": "module-ballerina-data.xmldata",
+            "module_version": "1.6.0-SNAPSHOT",
+            "level": 4,
+            "default_branch": "main",
+            "version_key": "stdlibDataXmldataVersion",
+            "release": true,
+            "dependents": [
+                "module-ballerina-ai",
+                "asyncapi-tools",
+                "openapi-tools"
             ],
             "is_multiple_connectors": false
         },
@@ -505,7 +506,7 @@
         },
         {
             "name": "module-ballerina-ai",
-            "module_version": "1.9.0-SNAPSHOT",
+            "module_version": "1.9.1-SNAPSHOT",
             "level": 8,
             "default_branch": "main",
             "version_key": "stdlibAiVersion",
@@ -529,7 +530,7 @@
         },
         {
             "name": "module-ballerina-soap",
-            "module_version": "2.3.1-SNAPSHOT",
+            "module_version": "2.3.2-SNAPSHOT",
             "level": 8,
             "default_branch": "master",
             "version_key": "stdlibSoapVersion",
@@ -629,7 +630,7 @@
     "extended_modules": [
         {
             "name": "module-ballerinax-cdc",
-            "module_version": "1.0.4-SNAPSHOT",
+            "module_version": "1.1.1-SNAPSHOT",
             "level": 11,
             "default_branch": "main",
             "version_key": "stdlibCdcVersion",
@@ -689,7 +690,7 @@
         },
         {
             "name": "module-ballerinax-persist.sql",
-            "module_version": "1.7.0-SNAPSHOT",
+            "module_version": "1.7.1-SNAPSHOT",
             "level": 13,
             "default_branch": "main",
             "version_key": "stdlibPersistSqlVersion",
@@ -945,7 +946,7 @@
         },
         {
             "name": "module-ballerinax-sap",
-            "module_version": "1.2.1-SNAPSHOT",
+            "module_version": "1.3.1-SNAPSHOT",
             "level": 100,
             "default_branch": "main",
             "version_key": "stdlibSapVersion",
@@ -1865,7 +1866,7 @@
         },
         {
             "name": "xsd-tools",
-            "module_version": "1.1.2-SNAPSHOT",
+            "module_version": "1.2.1-SNAPSHOT",
             "level": 2,
             "default_branch": "main",
             "version_key": "stdlibXsd-toolsVersion",
